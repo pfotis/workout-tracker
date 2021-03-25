@@ -12,7 +12,7 @@ async function initWorkout() {
       numExercises: lastWorkout.exercises.length,
       ...tallyExercises(lastWorkout.exercises)
     };
-
+    console.log(`workoutSummary: ${workoutSummary}`);
     renderWorkoutSummary(workoutSummary);
   } else {
     renderNoWorkoutText()
@@ -62,6 +62,7 @@ function renderWorkoutSummary(summary) {
     const strong = document.createElement("strong");
 
     strong.textContent = workoutKeyMap[key];
+    console.log(`summary[key] : ${summary[key]}`);
     const textNode = document.createTextNode(`: ${summary[key]}`);
 
     p.appendChild(strong);
