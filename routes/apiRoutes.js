@@ -12,8 +12,8 @@ router.get("/api/workouts", function(req, res){
     });
 });
 
-router.post("/api/workouts", (req, res) => {
-    db.create({})
+router.post("/api/workouts", ({ body }, res) => {
+    db.create(body)
       .then(data => {
         res.json(data);
       })
