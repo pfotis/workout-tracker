@@ -43,6 +43,7 @@ router.get("/api/workouts/range", function(req, res){
     .limit(8)
     .then((data) =>
     {
+      console.log(data);
       res.json(data)
     })
     .catch(err => 
