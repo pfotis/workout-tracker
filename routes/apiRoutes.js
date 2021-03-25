@@ -3,12 +3,12 @@ const db = require("../models/workout.js");
 
 
 router.get("/api/workouts", function(req, res){
-    db.find()
+    db.find({})
     .then((data) => {
       res.json(data);
     })
-    .catch((error) => {
-      console.log(error);
+    .catch(err => {
+      res.status(400).json(err);
     });
 });
 
@@ -34,19 +34,20 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
       res.json(data);
     })
     .catch(err => {
-      res.json(err);
+      res.status(400).json(err);
     });
 });
 
 router.get("/api/workouts/range", function(req, res){
-    db.find()
+    db.find({})
+    .limit(8)
     .then((data) =>
     {
       res.json(data)
     })
-    .catch((error) => 
+    .catch(err => 
     {
-      console.log(error)
+      res.status(400).json(err);
     });
 });
 
