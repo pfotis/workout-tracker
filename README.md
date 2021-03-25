@@ -16,7 +16,11 @@
 
 ## Description
 
-    Workout-Tracker is an application to support the user in his/her workout. In the main page the user could see the total time a spend for the last day use the app. At the page stats the user couls see with the help of the diagrams for every day the time spent or the pounds lift. And there is pies at the bottom of the same page to show the user where spend the time more or what lift more.
+    Workout-Tracker is an application to support the user in his/her workout. In the main 
+    page the user could see the total time a spend for the last day use the app. At the page 
+    stats the user couls see with the help of the diagrams for every day the time spent or the 
+    pounds lift. And there is pies at the bottom of the same page to show the user where spend 
+    the time more or what lift more.
 
     At this application we use mongo database to store and restore  and update the data (workout).
 
